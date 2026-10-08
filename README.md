@@ -11,7 +11,7 @@
 ![Views](https://visitor-badge.laobi.icu/badge?page_id=walterwhite-69.Anivexa-API)
 [![GitHub stars](https://img.shields.io/github/stars/walterwhite-69/Anivexa-API?style=flat-square&color=yellow)](https://github.com/walterwhite-69/Anivexa-API/stargazers)
 
-[Yumezone Discord](https://discord.gg/MARQ9z9QSX) (Not affiliated with or connected to this API!, and not a support server.)
+[Join the Discord](https://discord.gg/MARQ9z9QSX) (Not affiliated with or connected to this API; not a support server.)
 
 </div>
 
@@ -212,9 +212,9 @@ Copy `.env.example` to `.env` and fill in the values.
 | `UPSTASH_REDIS_REST_TOKEN` | — | From [upstash.com](https://upstash.com). Only used when `CACHE_ENABLED=true`. |
 | `DEFAULT_REDIS_TTL` | `900` | Seconds. Fallback expiry for Redis writes when a per-item TTL isn't computed. Most cache entries use their own smart TTLs based on anime status (finished/airing/etc.) — this is just the safety-net default. |
 | `PORT` | `4000` | Local dev server port (`server.js` only — ignored on Vercel/serverless). Change it if `4000` is already in use, then hit `http://localhost:PORT`. |
-| `MKISSA_WREQ_BROWSER` | `chrome_149` | wreq-js browser TLS and HTTP/2 profile used for MKissa requests. |
-| `MKISSA_WREQ_OS` | `windows` | Operating-system profile paired with the MKissa browser profile. |
-| `MKISSA_WREQ_REQUIRED` | `false` | Set to `1` to return a wreq-js error instead of falling back to Node fetch when its native binding is unavailable. |
+| `MKISSA_WREQ_BROWSER` | `chrome_149` | Optional wreq-js TLS/HTTP/2 browser profile for MKissa; usually leave the default. |
+| `MKISSA_WREQ_OS` | `windows` | Optional operating-system profile paired with the browser profile. |
+| `MKISSA_WREQ_REQUIRED` | `false` | Set to `1` to fail on any wreq-js error instead of falling back to Node fetch. |
 
 On Vercel (or Railway/Render), set these as regular project environment variables instead of committing `.env`.
 
