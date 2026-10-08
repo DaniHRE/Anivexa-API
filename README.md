@@ -212,9 +212,6 @@ Copy `.env.example` to `.env` and fill in the values.
 | `UPSTASH_REDIS_REST_TOKEN` | — | From [upstash.com](https://upstash.com). Only used when `CACHE_ENABLED=true`. |
 | `DEFAULT_REDIS_TTL` | `900` | Seconds. Fallback expiry for Redis writes when a per-item TTL isn't computed. Most cache entries use their own smart TTLs based on anime status (finished/airing/etc.) — this is just the safety-net default. |
 | `PORT` | `4000` | Local dev server port (`server.js` only — ignored on Vercel/serverless). Change it if `4000` is already in use, then hit `http://localhost:PORT`. |
-| `MKISSA_WREQ_BROWSER` | `chrome_149` | Optional wreq-js TLS/HTTP/2 browser profile for MKissa; usually leave the default. |
-| `MKISSA_WREQ_OS` | `windows` | Optional operating-system profile paired with the browser profile. |
-| `MKISSA_WREQ_REQUIRED` | `false` | Set to `1` to fail on any wreq-js error instead of falling back to Node fetch. |
 
 On Vercel (or Railway/Render), set these as regular project environment variables instead of committing `.env`.
 
